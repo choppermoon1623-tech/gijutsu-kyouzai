@@ -62,6 +62,7 @@ section { margin-top: 30px; }
 .area-b .area-badge { background: #8d6e63; }
 .area-c .area-badge { background: #f57f17; }
 .area-d .area-badge { background: #1565c0; }
+.area-x .area-badge { background: #546e7a; }
 .area-head h2 { margin: 0; font-size: 19px; color: #2e3d50; }
 
 .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -76,6 +77,7 @@ section { margin-top: 30px; }
 .area-b .card { border-top-color: #8d6e63; }
 .area-c .card { border-top-color: #f57f17; }
 .area-d .card { border-top-color: #1565c0; }
+.area-x .card { border-top-color: #546e7a; }
 .card h3 { margin: 0 0 6px; font-size: 18px; color: #1f2d3d; }
 .card .desc { margin: 0 0 8px; font-size: 13.5px; }
 .card .use {
@@ -235,6 +237,39 @@ footer a { color: #1565c0; }
       <div class="links">
         <a class="btn-open" href="https://choppermoon1623-tech.github.io/microbit-studio/" target="_blank" rel="noopener">▶ アプリを開く</a>
         <a class="gh-link" href="https://github.com/choppermoon1623-tech/microbit-studio" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🧩 計測・制御スタジオ</h3>
+      <p class="desc">「D(3) 計測・制御のプログラミング」対応。<b>ブロックで組んだ判断プログラムで、USBにつないだ本物のmicro:bitをリアルタイム制御</b>します。書き込み待ちゼロ。実機がなくても<b>仮想micro:bit</b>(センサーはスライダー)で全員がプログラミングでき、機体が人数分ない教室でも大丈夫。</p>
+      <p class="note-inline">※micro:bitの受信役は「micro:bit リアルタイムスタジオ」と同一。書き込み済みの機体はそのまま使えます。Chrome / Edge 推奨(仮想モードのみなら他ブラウザでも可)。</p>
+      <p class="use"><b>使いどころ:</b> 計測・制御の単元まるごと。ミッション5段階(自動ライト→温度アラーム→自動ドア→防犯センサー→スマートホーム自由課題)・見本プログラムつきで、「計測→判断→制御」を導入から評価課題まで。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/seigyo-studio/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/seigyo-studio" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== 教科をこえて ========== -->
+<section class="area-x">
+  <div class="area-head">
+    <span class="area-badge">＋ 教科をこえて</span>
+    <h2>学級・授業づくりのツール</h2>
+  </div>
+  <div class="cards">
+
+    <div class="card">
+      <h3>🔔 早押しクイズスタジオ</h3>
+      <p class="desc"><b>micro:bitが早押しボタンになる</b>教室ツール。生徒のmicro:bitは電池だけで動き(ケーブル不要)、無線で先生PCに届きます。早押しの<b>回答順とタイム表示・正解判定・効果音</b>、A/Bボタンでの<b>⭕❌全員参加アンケート(リアルタイム棒グラフ)</b>、点呼つき。</p>
+      <p class="note-inline">※先生用の中継役1台をUSBでPCにつなぎます(書き込みは最初の1回だけ・全生徒分は同じファイルでOK)。Chrome / Edge 限定。</p>
+      <p class="use"><b>使いどころ:</b> どの教科の復習クイズにも、学活のレクにも。無線の仕組みの教材化(D領域の導入)としても使えます。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/hayaoshi-quiz/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/hayaoshi-quiz" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
 
