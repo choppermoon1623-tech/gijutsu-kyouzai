@@ -18,10 +18,23 @@ body {
 
 /* ---- ヘッダー ---- */
 header {
-  background: linear-gradient(120deg, #1565c0, #2e7d32);
+  /* ロゴPNGは背景(#052532)が焼き込まれた不透明画像。地色をその色ぴったりに
+     合わせ、マスクで縁をぼかして溶け込ませている。地色を変えるとロゴが
+     四角い板に見えるので注意（blendで誤魔化すとロゴの暗部が地色に潰れる）。 */
+  background: #052532;
   color: #fff;
-  padding: 34px 20px 28px;
+  padding: 26px 20px 28px;
   text-align: center;
+  position: relative;
+}
+header::after {   /* 青→緑のアクセント（旧ヘッダーの配色を線として残す） */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, #1565c0, #2e7d32);
+}
+header .logo {
+  width: 300px; max-width: 74vw; height: auto; display: block; margin: 0 auto 2px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 64% at 50% 50%, #000 58%, transparent 97%);
+  mask-image: radial-gradient(ellipse 70% 64% at 50% 50%, #000 58%, transparent 97%);
 }
 header h1 { margin: 0 0 6px; font-size: clamp(22px, 4vw, 30px); letter-spacing: .05em; }
 header .sub { margin: 0 auto; max-width: 720px; font-size: 14.5px; opacity: .95; }
@@ -104,7 +117,7 @@ footer {
 footer a { color: #1565c0; }
 
 @media print {
-  header { background: #1565c0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  header { background: #052532; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .card, .intro, .howto { box-shadow: none; border: 1px solid #cfd8dc; }
   .btn-open { border: 1px solid #1565c0; }
 }
@@ -113,6 +126,7 @@ footer a { color: #1565c0; }
 <body>
 
 <header>
+  <img class="logo" src="assets/hm-works-logo.png" alt="H.M Works" onerror="this.style.display='none'">
   <h1>🔧 技術科 自作Web教材カタログ</h1>
   <p class="sub">中学校 技術・家庭科(技術分野)の授業用に、現職教員が自作したWeb教材のリンク集です。<br>
   リンクを配るだけで、生徒の端末ですぐに使えます。</p>
@@ -198,7 +212,7 @@ footer a { color: #1565c0; }
 <section class="area-d">
   <div class="area-head">
     <span class="area-badge">D 情報の技術</span>
-    <h2>プログラミング</h2>
+    <h2>プログラミング・計測制御</h2>
   </div>
   <div class="cards">
 
@@ -210,6 +224,17 @@ footer a { color: #1565c0; }
       <div class="links">
         <a class="btn-open" href="https://choppermoon1623-tech.github.io/two-way-studio/" target="_blank" rel="noopener">▶ アプリを開く</a>
         <a class="gh-link" href="https://github.com/choppermoon1623-tech/two-way-studio" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🎛️ micro:bit リアルタイムスタジオ</h3>
+      <p class="desc">PCの画面から <b>micro:bitをリアルタイムに操作</b>できるアプリ。スライダーを動かすとその場でサーボが回り、LEDが光り、音程が変わります。センサーの値は<b>1秒に20回グラフ</b>になり、CSVでも保存可能。MakeCodeと違って<b>書き込み待ちがゼロ</b>なので、試して直してを何十回でも繰り返せます。</p>
+      <p class="note-inline">※micro:bitに「受信役」を最初の1回だけ書き込む準備が必要です(コピー用コードと手順はアプリ内にあります)。USB接続を使うため<b>Chrome / Edge 限定</b>です。</p>
+      <p class="use"><b>使いどころ:</b> 計測・制御の導入に。「センサ→コンピュータ→アクチュエータ」の流れを、値をいじりながら1時間で体感できます。温度・明るさの記録は理科の計測実験にも。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/microbit-studio/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/microbit-studio" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
 
