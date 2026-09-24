@@ -91,14 +91,38 @@ section { margin-top: 30px; }
   border: 1.5px solid #8d6e63; border-radius: 8px; padding: 4px 10px;
 }
 .sublinks a:hover { background: #8d6e63; color: #fff; }
+.tag-zunda {
+  font-size: 11.5px; font-weight: bold; color: #2e7d32; background: #e8f5e9;
+  border: 1px solid #a5d6a7; border-radius: 999px; padding: 1px 8px; vertical-align: 2px;
+  white-space: nowrap;
+}
+.area-s .area-badge { background: linear-gradient(90deg, #6a1b9a, #c2185b); }
+.special {
+  background: #fff; border-radius: 16px; padding: 20px 22px;
+  box-shadow: 0 3px 12px rgba(106,27,154,.14);
+  border: 2px solid #ce93d8; border-top: 6px solid #8e24aa;
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px;
+}
+@media (max-width: 760px) { .special { grid-template-columns: 1fr; } }
+.special h3 { margin: 0 0 6px; font-size: 20px; }
+.special .desc { margin: 0 0 10px; font-size: 14px; }
+.special .flow { margin: 0; padding-left: 1.3em; font-size: 13.5px; }
+.special .flow li { margin-bottom: 4px; }
+.special .side { display: flex; flex-direction: column; gap: 10px; }
+.special .btn-open { background: #8e24aa; text-align: center; }
+.special .btn-sub {
+  display: inline-block; text-align: center; text-decoration: none; font-weight: bold; font-size: 14px;
+  color: #8e24aa; border: 2px solid #8e24aa; padding: 7px 18px; border-radius: 9px;
+}
+.special .btn-sub:hover { background: #f3e5f5; }
 .card h3 { margin: 0 0 6px; font-size: 18px; color: #1f2d3d; }
 .card .desc { margin: 0 0 8px; font-size: 13.5px; }
-.card .use {
+.card .use, .special .use {
   margin: 0 0 12px; font-size: 12.5px; color: #4e5d6d;
   background: #eef4ea; border-left: 4px solid #2e7d32; border-radius: 4px;
   padding: 7px 10px;
 }
-.card .use b { color: #2e7d32; }
+.card .use b, .special .use b { color: #2e7d32; }
 .card .links { margin-top: auto; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .btn-open {
   display: inline-block; text-decoration: none; font-weight: bold; font-size: 14.5px;
@@ -160,6 +184,7 @@ footer a { color: #1565c0; }
   各教材は「アプリを開く」からそのまま授業で使えます。自校用にコピーして使いたい場合は、
   ページ下の<a href="#howto">「自校で使うには」</a>をご覧ください。
   <nav class="toc">
+    <a href="#area-s" style="background:#8e24aa">★ 特別枠</a>
     <a href="#area-a" style="background:#8d6e63">A 材料と加工</a>
     <a href="#area-b" style="background:#2e7d32">B 生物育成</a>
     <a href="#area-c" style="background:#f57f17">C エネルギー変換</a>
@@ -167,6 +192,33 @@ footer a { color: #1565c0; }
     <a href="#area-x" style="background:#546e7a">教科をこえて</a>
   </nav>
 </div>
+
+<!-- ========== 特別枠 ========== -->
+<section class="area-s" id="area-s">
+  <div class="area-head">
+    <span class="area-badge">★ 特別枠</span>
+    <h2>AIが使えない教室で、AIを学びに活かす</h2>
+  </div>
+  <div class="special">
+    <div>
+      <h3>📮 AIおたずね箱</h3>
+      <p class="desc">生徒が直接AIを使えない環境で、<b>生徒が書いた「おたずね」を先生がAIに代わりに聞き、中身を確かめてから返す</b>受付アプリです。生徒の端末にAIは入りません。教科を問わず使えます。</p>
+      <ol class="flow">
+        <li>先生が受付を作り、<b>6文字の受付コード</b>を生徒に伝える</li>
+        <li>生徒は「なぜ知りたいか」「自分で調べたこと」「どこで行きづまったか」を書いて送る(丸投げできない作り)</li>
+        <li>先生の画面にリアルタイムで届き、AIに渡す文が自動で組み立てられる</li>
+        <li>先生がAIの答えを<b>読んで直してから</b>返すと、生徒の画面に表示される</li>
+      </ol>
+      <p class="use" style="margin-top:10px"><b>使いどころ:</b> 調べ学習・作文の助言・アイデア出し。計測・制御 逆引きシステムの相談もここに届きます。</p>
+    </div>
+    <div class="side">
+      <a class="btn-open" href="https://choppermoon1623-tech.github.io/ai-otazune/" target="_blank" rel="noopener">▶ アプリを開く</a>
+      <a class="btn-sub" href="https://choppermoon1623-tech.github.io/ai-otazune/manual.html" target="_blank" rel="noopener">📘 先生向け手引き</a>
+      <p class="note-inline" style="margin:0">※先生はGoogleログイン、生徒はログイン不要(受付コードのみ)。データは作成者のFirebaseに保存されるため、<b>他校で本格的に使う場合はコピーして自校のFirebase(無料)を設定</b>してください。</p>
+      <a class="gh-link" href="https://github.com/choppermoon1623-tech/ai-otazune" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
 
 <!-- ========== A 材料と加工 ========== -->
 <section class="area-a" id="area-a">
@@ -272,7 +324,7 @@ footer a { color: #1565c0; }
   <div class="cards">
 
     <div class="card">
-      <h3>⚡ 電気のきほん — 水と電気の流れ</h3>
+      <h3>⚡ 電気のきほん — 水と電気の流れ <span class="tag-zunda">ずんだもん解説</span></h3>
       <p class="desc"><b>電気を水の流れにたとえて</b>、電流・電圧・抵抗(オームの法則)を体感的に学べる教材。音声解説(ずんだもん)つきで、個別学習にも対応します。</p>
       <p class="use"><b>使いどころ:</b> エネルギー変換の単元の導入・復習に。理科の電気分野の学び直しとしても有効です。</p>
       <div class="links">
@@ -413,7 +465,9 @@ footer a { color: #1565c0; }
   <p>各教材はGitHubで公開しています。ご自身のGitHubアカウントで <b>Fork</b>(コピー)し、
   リポジトリの Settings → Pages で公開すれば、自校版のURLが数分で作れます。改変も自由です。</p>
   <ul>
-    <li><b>双方向プログラミングスタジオだけは自校版を推奨</b>:
+    <li><b>AIおたずね箱も自校版を推奨</b>:
+    おたずねと答えは作成者のFirebaseに保存されます。自校で続けて使う場合は、コピーして自校のFirebaseを設定してください(手順は先生向け手引きとリポジトリの README に記載)。</li>
+    <li><b>双方向プログラミングスタジオは自校版を推奨</b>:
     通信に使うFirebase(無料)の同時接続上限が100台のため、複数校で同じURLを使うと授業が重なった際に接続できないことがあります。
     設定手順(約10分)は同リポジトリの <code>docs/teacher-guide.md</code> に画面操作レベルで記載しています。</li>
   </ul>

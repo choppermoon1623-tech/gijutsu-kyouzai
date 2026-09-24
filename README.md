@@ -8,6 +8,7 @@
 
 | 領域 | 教材 | リポジトリ |
 |---|---|---|
+| ★ 特別枠 | 📮 AIおたずね箱 | [ai-otazune](https://github.com/choppermoon1623-tech/ai-otazune) |
 | A 材料と加工 | 🪵 木工設計スタジオ | [mokkou-studio](https://github.com/choppermoon1623-tech/mokkou-studio) |
 | A 材料と加工 | 🏭 ものづくり工房 | [monozukuri-koubou](https://github.com/choppermoon1623-tech/monozukuri-koubou) |
 | A 材料と加工 | ✂️ 切り絵スタジオ | [kirie-studio](https://github.com/choppermoon1623-tech/kirie-studio) |
@@ -15,7 +16,7 @@
 | A 材料と加工 | 🖨️ 3Dプリント STLメーカー集 | [gridfinity-stl](https://github.com/choppermoon1623-tech/gridfinity-stl), [vase-stl](https://github.com/choppermoon1623-tech/vase-stl), [lithophane-stl](https://github.com/choppermoon1623-tech/lithophane-stl), [terrain-stl](https://github.com/choppermoon1623-tech/terrain-stl), [city-stl](https://github.com/choppermoon1623-tech/city-stl) |
 | B 生物育成 | 🌱 テスト対策 生物育成① | [techart-1](https://github.com/choppermoon1623-tech/techart-1) |
 | B 生物育成 | 🐟 テスト対策 生物育成② | [techart-2](https://github.com/choppermoon1623-tech/techart-2) |
-| C エネルギー変換 | ⚡ 電気のきほん(水と電気の流れ) | [electronics](https://github.com/choppermoon1623-tech/electronics) |
+| C エネルギー変換 | ⚡ 電気のきほん(水と電気の流れ・ずんだもん解説) | [electronics](https://github.com/choppermoon1623-tech/electronics) |
 | C エネルギー変換 | 🚰 水でわかる MOSFET | [mosfet-mizu](https://github.com/choppermoon1623-tech/mosfet-mizu) |
 | C エネルギー変換 | 🗼 電気のとどけ方ラボ | [denki-todokekata](https://github.com/choppermoon1623-tech/denki-todokekata) |
 | C エネルギー変換 | 🔋 エネルギーミックス・スタジオ | [energy-mix-studio](https://github.com/choppermoon1623-tech/energy-mix-studio) |
