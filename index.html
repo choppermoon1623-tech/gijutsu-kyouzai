@@ -59,7 +59,8 @@ section { margin-top: 30px; }
   color: #fff; font-weight: bold; font-size: 14px;
   padding: 5px 14px; border-radius: 8px; white-space: nowrap;
 }
-.area-b .area-badge { background: #8d6e63; }
+.area-a .area-badge { background: #8d6e63; }
+.area-b .area-badge { background: #2e7d32; }
 .area-c .area-badge { background: #f57f17; }
 .area-d .area-badge { background: #1565c0; }
 .area-x .area-badge { background: #546e7a; }
@@ -74,10 +75,22 @@ section { margin-top: 30px; }
   display: flex; flex-direction: column;
   border-top: 5px solid #b0bec5;
 }
-.area-b .card { border-top-color: #8d6e63; }
+.area-a .card { border-top-color: #8d6e63; }
+.area-b .card { border-top-color: #2e7d32; }
 .area-c .card { border-top-color: #f57f17; }
 .area-d .card { border-top-color: #1565c0; }
 .area-x .card { border-top-color: #546e7a; }
+.toc { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.toc a {
+  font-size: 13px; font-weight: bold; text-decoration: none; color: #fff;
+  padding: 4px 12px; border-radius: 999px;
+}
+.sublinks { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.sublinks a {
+  font-size: 13px; text-decoration: none; color: #6d4c41; font-weight: bold;
+  border: 1.5px solid #8d6e63; border-radius: 8px; padding: 4px 10px;
+}
+.sublinks a:hover { background: #8d6e63; color: #fff; }
 .card h3 { margin: 0 0 6px; font-size: 18px; color: #1f2d3d; }
 .card .desc { margin: 0 0 8px; font-size: 13.5px; }
 .card .use {
@@ -143,15 +156,22 @@ footer a { color: #1565c0; }
 <main>
 
 <div class="intro">
-  学習指導要領の内容領域(<b>B 材料と加工</b>/<b>C エネルギー変換</b>/<b>D 情報</b>)ごとに掲載しています。
+  学習指導要領の内容領域(<b>A 材料と加工</b>/<b>B 生物育成</b>/<b>C エネルギー変換</b>/<b>D 情報</b>)ごとに掲載しています。
   各教材は「アプリを開く」からそのまま授業で使えます。自校用にコピーして使いたい場合は、
   ページ下の<a href="#howto">「自校で使うには」</a>をご覧ください。
+  <nav class="toc">
+    <a href="#area-a" style="background:#8d6e63">A 材料と加工</a>
+    <a href="#area-b" style="background:#2e7d32">B 生物育成</a>
+    <a href="#area-c" style="background:#f57f17">C エネルギー変換</a>
+    <a href="#area-d" style="background:#1565c0">D 情報</a>
+    <a href="#area-x" style="background:#546e7a">教科をこえて</a>
+  </nav>
 </div>
 
-<!-- ========== B 材料と加工 ========== -->
-<section class="area-b">
+<!-- ========== A 材料と加工 ========== -->
+<section class="area-a" id="area-a">
   <div class="area-head">
-    <span class="area-badge">B 材料と加工の技術</span>
+    <span class="area-badge">A 材料と加工の技術</span>
     <h2>設計・製図・加工</h2>
   </div>
   <div class="cards">
@@ -186,11 +206,65 @@ footer a { color: #1565c0; }
       </div>
     </div>
 
+    <div class="card">
+      <h3>🪟 組子パターンメーカー</h3>
+      <p class="desc">日本の伝統工芸「組子」の文様を選んで並べ、<b>レーザー加工用の透かしパネルSVG</b>を作れます。</p>
+      <p class="use"><b>使いどころ:</b> 伝統的な木工技術の紹介と、レーザー加工機での製作題材に。昔と今の加工法を比べる導入にも。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/kumiko-svg/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/kumiko-svg" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🖨️ 3Dプリント STLメーカー集</h3>
+      <p class="desc">スライダーや地図の操作だけで、<b>3Dプリンタ用のSTLデータ</b>ができるアプリ5本。CADを覚える前に「データを作る→出力する」を体験できます。</p>
+      <div class="sublinks">
+        <a href="https://choppermoon1623-tech.github.io/gridfinity-stl/" target="_blank" rel="noopener">🗃️ 収納ビン(Gridfinity)</a>
+        <a href="https://choppermoon1623-tech.github.io/vase-stl/" target="_blank" rel="noopener">🏺 花瓶</a>
+        <a href="https://choppermoon1623-tech.github.io/lithophane-stl/" target="_blank" rel="noopener">💡 透かし絵(リソフェイン)</a>
+        <a href="https://choppermoon1623-tech.github.io/terrain-stl/" target="_blank" rel="noopener">⛰️ 地形</a>
+        <a href="https://choppermoon1623-tech.github.io/city-stl/" target="_blank" rel="noopener">🏙️ 街並み</a>
+      </div>
+      <p class="use"><b>使いどころ:</b> 3Dプリンタの紹介・試し出力に。寸法を数値で決める体験は、設計で「機能と寸法」を考える練習になります。地形・街並みは社会科との教科横断にも。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== B 生物育成 ========== -->
+<section class="area-b" id="area-b">
+  <div class="area-head">
+    <span class="area-badge">B 生物育成の技術</span>
+    <h2>作物・動物・水産生物</h2>
+  </div>
+  <div class="cards">
+
+    <div class="card">
+      <h3>🌱 テスト対策 生物育成①</h3>
+      <p class="desc">「生物育成の技術とは/作物の育成環境/動物を育てる技術」を<b>用語カードで覚えて4択クイズで確認</b>。最後はランダム出題の総合チャレンジ。ふりがなつき。</p>
+      <p class="use"><b>使いどころ:</b> 定期テスト前の生徒の自習に。URLを配るだけで、家庭学習でも何度でも挑戦できます。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/techart-1/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/techart-1" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🐟 テスト対策 生物育成②</h3>
+      <p class="desc">「生物育成の基礎/作物/動物/<b>水産生物(養殖・放流)</b>/技術の工夫と問題解決」の5単元。用語カード＋4択クイズ＋総合チャレンジ。</p>
+      <p class="use"><b>使いどころ:</b> 単元のまとめ・テスト前の復習に。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/techart-2/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/techart-2" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- ========== C エネルギー変換 ========== -->
-<section class="area-c">
+<section class="area-c" id="area-c">
   <div class="area-head">
     <span class="area-badge">C エネルギー変換の技術</span>
     <h2>電気の仕組み</h2>
@@ -207,11 +281,41 @@ footer a { color: #1565c0; }
       </div>
     </div>
 
+    <div class="card">
+      <h3>🚰 水でわかる MOSFET</h3>
+      <p class="desc"><b>水門と水車の模型</b>を動かしながら、「電気で操作するスイッチ」MOSFETの3つの端子とON/OFFのしくみを学べます。水の世界と電気回路を並べて同時に動かす構成。micro:bitでモーターを動かす実物の配線例つき。</p>
+      <p class="use"><b>使いどころ:</b> スイッチング回路の説明に。計測・制御で、micro:bitから大きな電流を扱うしくみの説明にも。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/mosfet-mizu/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/mosfet-mizu" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🗼 電気のとどけ方ラボ</h3>
+      <p class="desc"><b>直流と交流/電池とACアダプタ/送電・配電/50Hzと60Hz/需要と供給のバランス</b>の5つを、操作して確かめるシミュレーター。</p>
+      <p class="use"><b>使いどころ:</b> 「電気を供給する仕組み」の授業に。なぜ高い電圧で送るのか、なぜ需要と供給をそろえるのかを、数値を動かしながら説明できます。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/denki-todokekata/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/denki-todokekata" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🔋 エネルギーミックス・スタジオ</h3>
+      <p class="desc">発電方法の<b>組み合わせ(電源構成)を自分で決める</b>と、電気代・CO2・国産率・停電リスク・必要な設備の量がその場で計算されます。</p>
+      <p class="use"><b>使いどころ:</b> 発電の単元のまとめや、エネルギー問題を考える課題に。「どの条件を重視したか」を理由とともに発表させる活動に向きます。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/energy-mix-studio/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/energy-mix-studio" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- ========== D 情報 ========== -->
-<section class="area-d">
+<section class="area-d" id="area-d">
   <div class="area-head">
     <span class="area-badge">D 情報の技術</span>
     <h2>プログラミング・計測制御</h2>
@@ -251,11 +355,32 @@ footer a { color: #1565c0; }
       </div>
     </div>
 
+    <div class="card">
+      <h3>🔍 計測・制御 逆引きシステム</h3>
+      <p class="desc">「暗くなったら」「土がかわいたら」など<b>やりたいことの言葉から、使えるセンサ・アクション装置を逆引き</b>できる索引。北海道教育大学札幌校 石川研究室の授業資料(51件)へつなぎます。問題が思いつかない生徒向けの「もんだいをみつける」入口つき。</p>
+      <p class="note-inline">※作成者による非公式の索引です。資料そのものは石川研究室のサイトにあります。「先生に送る」機能は作成者の勤務校用なので、他校では索引として使ってください。</p>
+      <p class="use"><b>使いどころ:</b> 計測・制御による問題解決で、生徒が装置名を知らずに調べられないときに。AIを使えない環境での課題設定の支えになります。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/keisoku-gyakubiki/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/keisoku-gyakubiki" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>💾 テスト対策 情報の技術</h3>
+      <p class="desc">「情報のデジタル化/情報セキュリティ/情報技術の進化と未来」などを<b>用語カード＋4択クイズ</b>で。ビット・暗号化・順次/分岐/反復・パケット・AIまで。ふりがなつき。</p>
+      <p class="use"><b>使いどころ:</b> D領域のまとめ・定期テスト前の自習に。</p>
+      <div class="links">
+        <a class="btn-open" href="https://choppermoon1623-tech.github.io/techart-3/" target="_blank" rel="noopener">▶ アプリを開く</a>
+        <a class="gh-link" href="https://github.com/choppermoon1623-tech/techart-3" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- ========== 教科をこえて ========== -->
-<section class="area-x">
+<section class="area-x" id="area-x">
   <div class="area-head">
     <span class="area-badge">＋ 教科をこえて</span>
     <h2>学級・授業づくりのツール</h2>
