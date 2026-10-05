@@ -20,6 +20,7 @@
 | C エネルギー変換 | 🚰 水でわかる MOSFET | [mosfet-mizu](https://github.com/choppermoon1623-tech/mosfet-mizu) |
 | C エネルギー変換 | 🗼 電気のとどけ方ラボ | [denki-todokekata](https://github.com/choppermoon1623-tech/denki-todokekata) |
 | C エネルギー変換 | 🔋 エネルギーミックス・スタジオ | [energy-mix-studio](https://github.com/choppermoon1623-tech/energy-mix-studio) |
+| C エネルギー変換 | 📝 でんきクエスト(クイズ→レポート) | [denki-quest](https://github.com/choppermoon1623-tech/denki-quest) |
 | D 情報 | 💬 双方向プログラミングスタジオ | [two-way-studio](https://github.com/choppermoon1623-tech/two-way-studio) |
 | D 情報 | 🎛️ micro:bit リアルタイムスタジオ | [microbit-studio](https://github.com/choppermoon1623-tech/microbit-studio) |
 | D 情報 | 🧩 計測・制御スタジオ | [seigyo-studio](https://github.com/choppermoon1623-tech/seigyo-studio) |
